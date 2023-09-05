@@ -7,7 +7,9 @@ The following scripts must be executed in Computer Algebra software SINGULAR htt
 
 1. RadicalT2-v4.singular
    This scripts performs the computation of a radical of defining ideal of A_{q=t=1} which is used in
+   
    a) Lemma 22 of Section 4.3
+   
    Versions of Singular 4.1.2 and 4.1.3 are recomended to run this code, but without the cache files this program should work on
    almost any version of Singular.
 
@@ -42,7 +44,26 @@ The following scripts must be executed in Computer Algebra software SINGULAR htt
 
 We include the following Mathematica Packages which contain most of the procedures:
 
-1. AbstractAlgebra.
+1. AbstractAlgebra.m
+   General package to work with associative algebra over a field.
+
+2. CommutativeAlgebra.wl
+   Basic functionality for commutative algebra.
+
+3. PoissonGeometry.wl
+   Basic functionality for Poisson brackets on commutative algebras.
+
+4. Deformation6j.wl
+   Package written with paper arXiv:1504.02620. We use just a few notations from there for consistency.
+
+5. HigherRuijsenaars.wl
+   Package written with paper arXiv:1704.02947. We use it to define homomorphism to q-difference operators.
+
+6. OxxAlgebra.wl
+   Main package for the current text.
+
+7. RepresentationAlgebras.wl
+   This package is used to define coordinate ring of the representation variety.
 
 -----------Precomputed data, "cache" subdirectory------------
 
