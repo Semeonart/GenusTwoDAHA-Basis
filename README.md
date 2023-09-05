@@ -15,7 +15,7 @@ The following scripts must be executed in Computer Algebra software SINGULAR htt
 
 ----------- Mathematica Notebooks, ".nb" files ---------------------
 
-1. IsomorphismABL.nb
+1. CommutativeIsomorphism.nb
    This notebook contains commutative algebra verifications required for Section 4 of the text. In particular, for
    
    a) Proposition 19 of Section 4.2
@@ -40,9 +40,7 @@ The following scripts must be executed in Computer Algebra software SINGULAR htt
    d) Lemma 4 of Section 2
    
 
------------ Mathematica Packages, ".m"/".wl" files------------------
-
-We include the following Mathematica Packages which contain most of the procedures:
+----------- Mathematica Packages and Data, ".m"/".wl" files------------------
 
 1. AbstractAlgebra.m
    General package to work with associative algebra over a field.
@@ -65,6 +63,12 @@ We include the following Mathematica Packages which contain most of the procedur
 7. RepresentationAlgebras.wl
    This package is used to define coordinate ring of the representation variety.
 
+8. ABL18-g2b0sl2.m
+   Generators and Relations of the set thoretic cut-off for genus two character variety obtained via program math.gmu.edu/%7eslawton3/trace-identities.nb
+   using the following input: FromSnapPyList["Generators: a,b,c,d Relators: abABcdCD"];
+   We use this list of relations in CommutativeIsomorphism.nb
+
+
 -----------Precomputed data, "cache" subdirectory------------
 
 Some of the computations used in this project are rather resourse heavy. For this reason we include precomputed files with an output
@@ -78,3 +82,12 @@ of precomputed data included:
    For other versions delete this cache file and the program will recalculate the generating set using about 1.5G of memeory and
    6-12 hours on average 2023 computer.
    
+2. Quot1_h1_T2.singular
+   Generators of the first quotient ideal used for calculation of a saturated ideal in RadicalT2-v4.singular. Can be recalculated in just a few hours if Radical_T2_Rad1.ssi is already computed.
+
+3. Quot1_h2_T2.singular
+   Generators of the second quotient ideal used for calculation of a saturated ideal in RadicalT2-v4.singular. Also can be recalculated in just a few hours if Radical_T2_Rad1.ssi is already computed.
+
+4. Ideal19/regular-basis-XX.m Decomposition of normally ordered monomials up to degree XX using the \rho generators with coefficients regular at Q=1. For 1<=XX<=9 this can be recomputed in secods; for XX=10 in a few minutes; for XX=11 in a few hours; for XX=12 in a couple of days. Without parallelization XX=13 computes in a couple of weeks. This cache is needed if you want to compute decomposition of q-Groebner elements via original relators with regular coefficients. See Ideal-MCG-Action.nb.
+
+5. NCGroebner/XX.m q-Groebner basis elements obtained through deformation of commutative Groebner basis. It will take just a few hours to compute all of them.
