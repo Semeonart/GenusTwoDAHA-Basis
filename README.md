@@ -15,17 +15,26 @@ The following scripts must be executed in Computer Algebra software SINGULAR htt
 
 1. IsomorphismABL.nb
    This notebook contains commutative algebra verifications required for Section 4 of the text. In particular, for
+   
    a) Proposition 19 of Section 4.2
+   
    b) Lemma 21 of Section 4.3
+   
    c) Lemma 45 of Appendix B
+   
    d) Lemma 46 of Appendix B
+   
    e) Lemma 47 of Appendix B
 
-2. Ideal-MCG-Action.nb
+3. Ideal-MCG-Action.nb
    This notebook contains noncommutative algebra verifications required for Appendices A & C. In particular, for
+   
    a) Proposition 48 of Appendix C
+   
    b) Remark 49 of Appendix C
+   
    c) Appendix A
+   
    d) Lemma 4 of Section 2
    
 
