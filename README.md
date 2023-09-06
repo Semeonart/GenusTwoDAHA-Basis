@@ -1,5 +1,5 @@
 # GenusTwoDAHA-Basis
-This project contains supplementary materials for paper ArXiv:
+This project contains supplementary materials for paper ArXiv:2309.01011 http://arxiv.org/abs/2309.01011
 
 -----------Scripts for SINGULAR, ".singular" files-----------
 
