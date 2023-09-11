@@ -6,7 +6,7 @@ This project contains supplementary materials for paper ArXiv:2309.01011 http://
 The following scripts must be executed in Computer Algebra software SINGULAR https://www.singular.uni-kl.de/
 
 1. RadicalT2-v4.singular
-   This scripts performs the computation of a radical of defining ideal of A_{q=t=1} which is used in
+   This scripts performs the computation of the radical of defining ideal of A_{q=t=1} which is used in
    
    a) Lemma 22 of Section 4.3
    
@@ -83,11 +83,25 @@ of precomputed data included:
    6-12 hours on average 2023 computer.
    
 2. Quot1_h1_T2.singular
-   Generators of the first quotient ideal used for calculation of a saturated ideal in RadicalT2-v4.singular. Can be recalculated in just a few hours if Radical_T2_Rad1.ssi is already computed.
+   Generators of the first quotient ideal used for calculation of a saturated ideal in RadicalT2-v4.singular.
+   Can be recalculated in just a few hours if Radical_T2_Rad1.ssi is already computed.
 
-3. Quot1_h2_T2.singular
-   Generators of the second quotient ideal used for calculation of a saturated ideal in RadicalT2-v4.singular. Also can be recalculated in just a few hours if Radical_T2_Rad1.ssi is already computed.
+4. Quot1_h2_T2.singular
+   Generators of the second quotient ideal used for calculation of a saturated ideal in RadicalT2-v4.singular.
+   Also can be recalculated in just a few hours if Radical_T2_Rad1.ssi is already computed.
 
-4. Ideal19/regular-basis-XX.m Decomposition of normally ordered monomials up to degree XX using the \rho generators with coefficients regular at Q=1. For 1<=XX<=9 this can be recomputed in secods; for XX=10 in a few minutes; for XX=11 in a few hours; for XX=12 in a couple of days. Without parallelization XX=13 computes in a couple of weeks. This cache is needed if you want to compute decomposition of q-Groebner elements via original relators with regular coefficients. See Ideal-MCG-Action.nb.
+6. NCGroebner/XX.m
+   Expression for the q-Groebner element with number 1<=XX<=61. This cache is needed to bring expressions to canonical form in the main algebra.
+   If cached files are not found by the program, parts of it will be automatically recomputed only as neccessary, i.e.
+   when simplification of your expression actually utilizes the given q-Groebner element. The full collection of q-Groebner elements can be recomputed in a few hours.
 
-5. NCGroebner/XX.m q-Groebner basis elements obtained through deformation of commutative Groebner basis. It will take just a few hours to compute all of them.
+8. NCGroebner/Coeff-Ideal19-XX.m
+   Decomposition of q-Groebner elements as linear combintaion of relators \rho and \eta with two-sided coefficients regular at Q=1.
+   Essentially formulas for the proof of Proposition 48 of Appendix C.
+   This cache on its own can be recomputed in a few hours provided that computationally-heavy auxiliarry cache "Ideal19/regular-basis-XX.m" is already computed.
+
+10. Ideal19/regular-basis-XX.m
+    Auxilliary cache, primarily used as an intermediate step for computation of "NCGroebner/Coeff-Ideal19-XX.m".
+    It contains small spanning set of linear combinations of relators up to the total degree XX using the \rho and \eta generators with coefficients regular at Q=1.
+    For 1<=XX<=9 this can be recomputed in secods; for XX=10 in a few minutes; for XX=11 in a few hours; for XX=12 in a couple of days.
+    Without parallelization XX=13 computes in a couple of weeks. This cache is needed if you want to compute decomposition of q-Groebner elements via original relators with regular coefficients, see Ideal-MCG-Action.nb.
