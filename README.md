@@ -71,7 +71,7 @@ The following scripts must be executed in Computer Algebra software SINGULAR htt
 
 -----------Precomputed data, "cache" subdirectory------------
 
-Some of the computations used in this project are rather resourse heavy. For this reason we include precomputed files with an output
+Some of the computations used in this project are resource heavy. For this reason we include precomputed files with an output
 of these calculations along with our source code, so that the programs would not require long initialization. Cache is not required
 for the code to run, if you clear the cache the programs will recalculate required parts of the cache as they go. Here is the list
 of precomputed data included:
